@@ -1,0 +1,4 @@
+[ERROR] 2019-07-14  method:org.lq.ZOO.ui.ui_animalVideo$1.run(ui_animalVideo.java:48)
+java.lang.NullPointerException
+[ERROR]  2019-07-14 method:org.lq.ZOO.ui.ui_animalVideo$1.run(ui_animalVideo.java:48)
+java.lang.NullPointerException

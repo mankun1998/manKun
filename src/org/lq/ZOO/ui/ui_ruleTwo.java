@@ -1,0 +1,90 @@
+package org.lq.ZOO.ui;
+
+import java.awt.BorderLayout;
+import java.awt.Color;
+import java.awt.EventQueue;
+import java.awt.Font;
+
+import javax.swing.ImageIcon;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JPanel;
+import javax.swing.JScrollPane;
+import javax.swing.JTextPane;
+import javax.swing.border.EmptyBorder;
+
+import lombok.extern.log4j.Log4j;
+
+import java.awt.Toolkit;
+
+/**
+ * @author许浩
+ * @2019年7月3日
+ * @ui_ruleOne.java
+ * @ZOO
+ */
+/**
+ * @author 许浩
+ * 2019年7月3日
+ */
+@Log4j
+public class ui_ruleTwo extends JFrame {
+
+	private JPanel contentPane;
+
+	/**
+	 * Launch the application.
+	 */
+	public static void main(String[] args) {
+		EventQueue.invokeLater(new Runnable() {
+			public void run() {
+				try {
+					ui_ruleTwo frame = new ui_ruleTwo();
+					frame.setVisible(true);
+				} catch (Exception e) {
+					log.error("规定2窗口错误",e);
+				}
+			}
+		});
+	}
+
+	/**
+	 * Create the frame.
+	 */
+	public ui_ruleTwo() {
+		setResizable(false);
+		setIconImage(Toolkit.getDefaultToolkit().getImage(ui_ruleTwo.class.getResource("/org/lq/ZOO/icon/bg/1.png")));
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		setBounds(100, 100, 759, 764);
+		contentPane = new JPanel();
+		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
+		contentPane.setLayout(new BorderLayout(0, 0));
+		setContentPane(contentPane);
+		
+		JPanel panel = new JPanel();
+		contentPane.add(panel, BorderLayout.CENTER);
+		panel.setLayout(null);
+		
+		JScrollPane scrollPane = new JScrollPane();
+		scrollPane.setBounds(0, 0, 733, 757);
+		panel.add(scrollPane);
+		
+		JTextPane textPane = new JTextPane();
+		textPane.setBackground(new Color(0, 255, 0));
+		textPane.setEditable(false);
+		textPane.setFont(new Font("宋体", Font.BOLD, 18));
+		textPane.setText("\u7B2C\u4E8C\u7AE0 \u516C\u56ED\u4E8B\u4E1A\u53D1\u5C55\r\n\r\n\u7B2C\u4E5D\u6761 \u5E02\u56ED\u6797\u884C\u653F\u7BA1\u7406\u90E8\u95E8\u5E94\u5F53\u4F1A\u540C\u5E02\u4EBA\u6C11\u653F\u5E9C\u6709\u5173\u884C\u653F\u7BA1\u7406\u90E8\u95E8\u4F9D\u636E\u5317\u4EAC\u57CE\u5E02\u603B\u4F53\u89C4\u5212\u548C\u7EFF\u5730\u7CFB\u7EDF\u89C4\u5212\u7F16\u5236\u516C\u56ED\u4E8B\u4E1A\u53D1\u5C55\u89C4\u5212\u53CA\u5B9E\u65BD\u8BA1\u5212\uFF0C\u62A5\u5E02\u4EBA\u6C11\u653F\u5E9C\u6279\u51C6\u540E\u5B9E\u65BD\u3002\r\n\r\n\u7B2C\u5341\u6761 \u672C\u5E02\u5E94\u5F53\u79EF\u6781\u4FDD\u62A4\u3001\u5229\u7528\u5386\u53F2\u540D\u56ED\uFF0C\u53D1\u5C55\u5EFA\u8BBE\u5927\u3001\u4E2D\u578B\u516C\u56ED\uFF0C\u5E76\u6CE8\u91CD\u5EFA\u8BBE\u5C0F\u578B\u516C\u56ED\u3002\u65B0\u5EFA\u5C45\u4F4F\u533A\u5FC5\u987B\u6309\u7167\u89C4\u5B9A\u6807\u51C6\u5EFA\u8BBE\u5C45\u4F4F\u533A\u516C\u56ED\u3002\u65E7\u57CE\u533A\u6539\u9020\u3001\u65B0\u533A\u5F00\u53D1\u5E94\u5F53\u89C4\u5212\u5EFA\u8BBE\u516C\u56ED\u3002\u57CE\u5E02\u9053\u8DEF\u4E24\u4FA7\u3001\u6CB3\u9053\u4E24\u4FA7\uFF0C\u6709\u6761\u4EF6\u7684\u5E94\u5F53\u7ED3\u5408\u5468\u8FB9\u73AF\u5883\u5EFA\u8BBE\u516C\u56ED\u3002\r\n\r\n\u7B2C\u5341\u4E00\u6761 \u4EFB\u4F55\u5355\u4F4D\u548C\u4E2A\u4EBA\u4E0D\u5F97\u64C5\u81EA\u6539\u53D8\u516C\u56ED\u7684\u529F\u80FD\uFF0C\u4E0D\u5F97\u4FB5\u5360\u516C\u56ED\u7528\u5730\uFF0C\u4E0D\u5F97\u64C5\u81EA\u6539\u53D8\u516C\u56ED\u7528\u5730\u6027\u8D28\u89C4\u5212\u786E\u5B9A\u7684\u516C\u56ED\u7528\u5730\u4E0D\u5F97\u64C5\u81EA\u6539\u4F5C\u4ED6\u7528\uFF0C\u786E\u9700\u8C03\u6574\u65F6\uFF0C\u5E94\u5F53\u5236\u5B9A\u8C03\u6574\u65B9\u6848\uFF0C\u8C03\u6574\u65B9\u6848\u9700\u7ECF\u89C4\u5212\u3001\u56ED\u6797\u7B49\u90E8\u95E8\u8BBA\u8BC1\u63D0\u51FA\u610F\u89C1\uFF0C\u62A5\u5E02\u4EBA\u6C11\u653F\u5E9C\u5BA1\u6279\u3002\u5DF2\u7ECF\u5360\u7528\u516C\u56ED\u571F\u5730\u3001\u623F\u5C4B\u7684\u5355\u4F4D\u548C\u4E2A\u4EBA\uFF0C\u5E94\u5F53\u8FC1\u51FA\u3002\r\n\r\n\u7B2C\u5341\u4E8C\u6761 \u65B0\u5EFA\u516C\u56ED\u5E94\u5F53\u5C3D\u53EF\u80FD\u9009\u62E9\u5386\u53F2\u3001\u6587\u5316\u7B49\u9057\u5740\u3001\u9057\u8FF9\u53CA\u5176\u4ED6\u5177\u6709\u7EAA\u5FF5\u610F\u4E49\u7684\u533A\u57DF\u5730\u70B9\u3002\u9F13\u52B1\u5229\u7528\u8352\u6EE9\u3001\u8352\u5730\u3001\u5E9F\u5F03\u5730\u3001\u5783\u573E\u586B\u57CB\u573A\u7B49\u5EFA\u9020\u516C\u56ED\u3002\r\n\r\n\u7B2C\u5341\u4E09\u6761 \u672C\u5E02\u516C\u76CA\u6027\u516C\u56ED\u5E94\u5F53\u4EE5\u653F\u5E9C\u7EC4\u7EC7\u5EFA\u8BBE\u4E3A\u4E3B\u5BFC\u3002\u672C\u5E02\u9F13\u52B1\u81EA\u7136\u4EBA\u3001\u6CD5\u4EBA\u548C\u5176\u4ED6\u7EC4\u7EC7\u6295\u8D44\u5EFA\u8BBE\u516C\u76CA\u6027\u516C\u56ED\u6216\u8005\u4EE5\u6350\u8D60\u3001\u8BA4\u517B\u7B49\u65B9\u5F0F\u53C2\u4E0E\u516C\u56ED\u5EFA\u8BBE\u3002\r\n\r\n\u7B2C\u5341\u56DB\u6761 \u5404\u7EA7\u4EBA\u6C11\u653F\u5E9C\u5E94\u5F53\u5236\u5B9A\u79EF\u6781\u7684\u653F\u7B56\u548C\u63AA\u65BD\uFF0C\u4FC3\u8FDB\u516C\u56ED\u4E8B\u4E1A\u7684\u53D1\u5C55\u3002\r\n\r\n\u7B2C\u5341\u4E94\u6761 \u5404\u7EA7\u4EBA\u6C11\u653F\u5E9C\u5E94\u5F53\u652F\u6301\u516C\u56ED\u4E8B\u4E1A\u7684\u79D1\u5B66\u6280\u672F\u7814\u7A76\u5DE5\u4F5C\uFF0C\u9F13\u52B1\u79D1\u5B66\u6280\u672F\u548C\u5148\u8FDB\u7BA1\u7406\u7ECF\u9A8C\u7684\u63A8\u5E7F\u8FD0\u7528\uFF0C\u5E76\u6309\u7167\u4FDD\u62A4\u751F\u7269\u591A\u6837\u6027\u7684\u539F\u5219\u548C\u4FDD\u62A4\u6587\u5316\u3001\u81EA\u7136\u9057\u4EA7\u7684\u8981\u6C42\uFF0C\u52A0\u5F3A\u5BF9\u516C\u56ED\u6587\u5316\u3001\u81EA\u7136\u8D44\u6E90\u7684\u6709\u6548\u4FDD\u62A4\u548C\u79D1\u5B66\u5229\u7528\u3002");
+		textPane.setBounds(10, 10, 709, 707);
+		panel.add(textPane);
+		
+		textPane.setFont(new Font("宋体", Font.BOLD, 16));
+		textPane.setOpaque(false);
+		scrollPane.setOpaque(false);
+		scrollPane.getViewport().setOpaque(false);
+		JLabel lblNewLabel = new JLabel("New label");
+		lblNewLabel.setIcon(new ImageIcon(ui_ruleFive.class.getResource("/org/lq/ZOO/icon/bg/bg1.jpg")));
+		lblNewLabel.setBounds(0, 0, 733, 757);
+		panel.add(lblNewLabel);
+	}
+
+}
